@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Heart Disease Analysis</h1>
+    <p>Comprehensive Data Visualization using Tableau</p>
+    <a href="/dashboard" class="btn">Explore Dashboard</a>
+</section>
+
+<section class="about">
+    <h2>About The Project</h2>
+    <p>
+        This project analyzes heart disease patterns based on age,
+        gender, diabetes, smoking, alcohol consumption, and BMI.
+        It provides interactive insights using Tableau dashboards.
+    </p>
+</section>
+
+<section class="features">
+    <div class="card">
+        <h3>Demographic Analysis</h3>
+        <p>Age, Gender & Race based insights.</p>
+    </div>
+    <div class="card">
+        <h3>Lifestyle Impact</h3>
+        <p>Smoking, Alcohol & Physical Activity.</p>
+    </div>
+    <div class="card">
+        <h3>Medical Conditions</h3>
+        <p>Stroke, Diabetes & Heart Disease relationships.</p>
+    </div>
+</section>
+
+{% endblock %}

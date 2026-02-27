@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Heart Disease Analysis</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/story">Story</a>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer>
+    © 2026 Heart Disease Project | Flask + Tableau
+</footer>
+
+</body>
+</html>

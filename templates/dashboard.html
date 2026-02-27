@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <h2 class="page-title">Interactive Dashboards</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showDash('d1', this)">Demographic Analysis</button>
+        <button class="tab-btn" onclick="showDash('d2', this)">Lifestyle Factors</button>
+        <button class="tab-btn" onclick="showDash('d3', this)">Medical Conditions</button>
+    </div>
+
+    <div id="d1" class="dash active-dash">
+        <iframe 
+        src="https://public.tableau.com/views/heartdiseasegro/LifestyleRiskFactors?:embed=yes&:showVizHome=no"
+        width="100%" 
+        height="850"
+        frameborder="0">
+        </iframe>
+    </div>
+
+    <div id="d2" class="dash">
+        <iframe 
+        src="https://public.tableau.com/views/heartdiseasegr/MedicalConditionsAnalysis?:embed=yes&:showVizHome=no"
+        width="100%" 
+        height="850"
+        frameborder="0">
+        </iframe>
+    </div>
+
+    <div id="d3" class="dash">
+        <iframe 
+        src="https://public.tableau.com/views/heartdiseaseg/Demographicanalysis?:embed=yes&:showVizHome=no"
+        width="100%" 
+        height="850"
+        frameborder="0">
+        </iframe>
+    </div>
+
+</div>
+
+<script>
+function showDash(id, btn) {
+    document.querySelectorAll('.dash').forEach(d => d.classList.remove('active-dash'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active-dash');
+    btn.classList.add('active');
+}
+</script>
+
+{% endblock %}
